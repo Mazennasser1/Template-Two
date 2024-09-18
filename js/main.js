@@ -75,6 +75,8 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
+// Get the scrollToTop element
+// Get the scrollToTop element
 var scrollToTopButton = document.getElementById("scrollToTop");
 
 // Show or hide the button based on scroll position
