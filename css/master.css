@@ -80,39 +80,34 @@ ul {
 .top {
     position: fixed;
     right: 10px;
-    bottom: 10px;
-    transform: rotate(180deg);
+    bottom: -80px; 
     padding: 10px;
     z-index: 100000;
     background-color: var(--main-color);
     border-radius: 10px;
     text-align: center;
+    transition: bottom 0.3s ease-in-out; 
     animation: Bouncing 2s linear infinite;
+}
 
+
+.top.show {
+    transform: rotate(90deg);
+    bottom: 10px;
 }
 
 .top i {
     color: white;
 }
 
+/* Animation */
 @keyframes Bouncing {
-
-    0%,
-    20%,
-    30%,
-    50%,
-    70%,
-    80%,
-    90%,
-    100% {
-        bottom: 10px;
+    0%, 20%, 30%, 50%, 70%, 80%, 90%, 100% {
+        transform: translateY(0);
     }
-
-    40%,
-    60% {
-        bottom: 15px;
+    40%, 60% {
+        transform: translateY(-5px); 
     }
-
 }
 
 /* start header */
