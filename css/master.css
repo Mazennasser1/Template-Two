@@ -77,23 +77,24 @@ ul {
     left: 0;
 }
 
+/* Initial hidden state */
 .top {
     position: fixed;
     right: 10px;
-    bottom: -80px; 
+    bottom: -80px; /* Initially hide below the viewport */
     padding: 10px;
     z-index: 100000;
     background-color: var(--main-color);
     border-radius: 10px;
     text-align: center;
-    transition: bottom 0.3s ease-in-out; 
+    transition: bottom 0.3s ease-in-out; /* Smooth transition for bottom property */
     animation: Bouncing 2s linear infinite;
 }
 
-
+/* Show the button */
 .top.show {
     transform: rotate(90deg);
-    bottom: 10px;
+    bottom: 10px; /* Move the button up into view */
 }
 
 .top i {
@@ -103,12 +104,13 @@ ul {
 /* Animation */
 @keyframes Bouncing {
     0%, 20%, 30%, 50%, 70%, 80%, 90%, 100% {
-        transform: translateY(0);
+        transform: translateY(0); /* Reset vertical position */
     }
     40%, 60% {
-        transform: translateY(-5px); 
+        transform: translateY(-5px); /* Slight bounce effect */
     }
 }
+
 
 /* start header */
 .header {
